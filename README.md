@@ -115,4 +115,5 @@ I'd start by moving the external AI call outside the long-running database trans
 
 Here's the dashboard after signing in and saving *Interstellar* as the favorite movie. It shows the account details, saved movie, generated fact, and the option to request another fact.
 
-![Movie Memory dashboard showing the favorite movie and a generated fun fact](screenshots/dashboard.png)
+<img width="1728" height="1117" alt="Screenshot 2026-11-11 at 11 27 41 PM" src="https://github.com/user-attachments/assets/315e1cff-6426-4762-b362-893ad9c2f3ef" />
+
