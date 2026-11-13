@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { background: theme("colors.fog"); color: theme("colors.ink.DEFAULT"); }
+  body { @apply font-sans antialiased; min-height: 100dvh; }
+  :focus-visible { outline: 2px solid theme("colors.cobalt.DEFAULT"); outline-offset: 2px; }
+}
+
+/* Ticket stub: perforated notches punched out with radial gradients. */
+@layer components {
+  .ticket {
+    --notch: 12px;
+    background:
+      radial-gradient(circle var(--notch) at 0 var(--stub-y, 72%), transparent 98%, theme("colors.paper") 100%) left / 51% 100% no-repeat,
+      radial-gradient(circle var(--notch) at 100% var(--stub-y, 72%), transparent 98%, theme("colors.paper") 100%) right / 51% 100% no-repeat;
+    filter: drop-shadow(0 1px 0 rgba(18, 26, 36, 0.12)) drop-shadow(0 12px 24px rgba(18, 26, 36, 0.08));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
