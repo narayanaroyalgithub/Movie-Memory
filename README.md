@@ -104,12 +104,6 @@ I also tested Google sign-in and generated a fact in the browser during developm
 
 I'd start by moving the external AI call outside the long-running database transaction, with a short-lived generation state to coordinate requests. Then I'd add per-user rate limits, basic timing and error metrics, and an end-to-end browser test covering sign-in and onboarding. I'd also consider using the database clock for cache expiration and cleaning up old fact rows.
 
-## AI usage
-
-- Used ChatGPT to troubleshoot API integration and interpret errors during local testing.
-- Used AI assistance for some code and test review and to help organize documentation.
-- Used Gemini temporarily to test live fact generation before switching the submission configuration back to OpenAI.
-- Checked the behavior locally using the application, automated tests, and production build rather than relying only on generated suggestions.
 
 ## Dashboard screenshot
 
